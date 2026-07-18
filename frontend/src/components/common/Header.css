@@ -1,0 +1,73 @@
+.header {
+  background: linear-gradient(135deg, #2c1810 0%, #4a3728 100%);
+  color: #f5f0e8;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c8a96e;
+}
+
+.logo-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: rgba(200, 169, 110, 0.2);
+  border: 1px solid #c8a96e;
+  color: #f5f0e8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background: rgba(200, 169, 110, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.4rem;
+  }
+}
