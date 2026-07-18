@@ -1,0 +1,167 @@
+.scenario-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.scenario-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: white;
+  border: 2px solid #c8a96e;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  color: #4a3728;
+  min-width: 180px;
+}
+
+.scenario-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200, 169, 110, 0.3);
+}
+
+.scenario-icon {
+  font-size: 1.2rem;
+}
+
+.scenario-label {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.scenario-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: #999;
+}
+
+.scenario-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Выпадающий список */
+.scenario-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  animation: slideDown 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scenario-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  color: #4a3728;
+  font-family: 'Raleway', sans-serif;
+}
+
+.scenario-option:hover {
+  background: rgba(200, 169, 110, 0.05);
+  transform: translateX(5px);
+}
+
+.scenario-option.active {
+  background: rgba(200, 169, 110, 0.1);
+  border-left-color: #c8a96e;
+}
+
+.option-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.option-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.option-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.option-description {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.option-check {
+  color: #c8a96e;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.scenario-info {
+  padding: 12px 16px;
+  border-top: 1px solid #f0ebe4;
+  margin-top: 8px;
+  background: #faf8f5;
+  border-radius: 12px;
+}
+
+.info-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b5b4b;
+  line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .scenario-trigger {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    min-width: 140px;
+  }
+
+  .scenario-dropdown {
+    min-width: 280px;
+    right: -20px;
+  }
+
+  .scenario-option {
+    padding: 10px 14px;
+  }
+
+  .option-description {
+    display: none;
+  }
+}
