@@ -22,7 +22,7 @@
 
 ### Установка
 ```bash
-git clone https://github.com/yourusername/sokrat-vertera.git
+git clone https://github.com/savdoshin/sokrat-vertera.git
 cd sokrat-vertera
 
 # Бэкенд
